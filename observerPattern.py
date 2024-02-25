@@ -1,5 +1,5 @@
 """
-Observer Design Pattern
+Observer Design Pattern: https://youtu.be/Ep9_Zcgst3U?si=QaVQVhlxRgnchxEh
 
 Problem:
 
@@ -169,7 +169,7 @@ def main():
     product_catalogue['Iphone 15'].add_observer(customers['Harsh'])
     product_catalogue['Iphone 11'].add_observer(customers['Vidit'])
     product_catalogue['Iphone 15'].add_observer(customers['Aman'])
-    product_catalogue['Iphone 12'].add_observer(customers['Piyush'])    
+    product_catalogue['Iphone 12'].add_observer(customers['Piyush'])
 
     product_catalogue['Iphone 15'].set_product_status(True)
     product_catalogue['Iphone 13'].set_product_status(True)
