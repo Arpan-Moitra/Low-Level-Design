@@ -7,9 +7,6 @@ inherit multiple classes from the base class and some of those classes over-ride
 This way multiple child classes redundantly implement foo which leads to code duplication and impacts
 maintainability and scalability.
 
-"""
-
-"""
 # Bad Approach, with code duplication:
 
 
@@ -45,10 +42,12 @@ OffRoadVehicle().drive()
 
 """
 
-
 # Good Approach Following Strategy Pattern:
 
-class DriveStrategy:
+from abc import ABC, abstractmethod
+
+
+class DriveStrategy(ABC):
     def drive(self):
         pass
 

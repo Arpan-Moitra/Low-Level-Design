@@ -77,22 +77,23 @@ Use-case:
     Implement Notify me functionality on E-commerce websites. If a product is out of stock, notify the
     subscribed user once the product is back in stock.
 """
+from abc import ABC, abstractmethod
 
 
-class ObservableProduct:
-
-    def __init__(self):
-        pass
-
+class ObservableProduct(ABC):
+    @abstractmethod
     def add_observer(self, observing_entity):
         pass
 
+    @abstractmethod
     def remove_observer(self, observing_entity):
         pass
 
-    def notify_observers(self):
+    @abstractmethod
+    def _notify_observers(self):
         pass
 
+    @abstractmethod
     def set_product_status(self, product_status):
         pass
 
@@ -127,10 +128,8 @@ class ConcreteObservableProduct(ObservableProduct):
         return f"{self._product_name}: {'in Stock' if self._in_stock else 'out of stock'}: {self._observer_list}"
 
 
-class ObserverEntity:
-    def __init__(self):
-        pass
-
+class ObserverEntity(ABC):
+    @abstractmethod
     def update(self, observable_entity):
         pass
 

@@ -13,12 +13,11 @@ Example:
     toppings and nest them together to for pizza with custom toppings.
 
 """
+from abc import ABC, abstractmethod
 
 
-class BasePizza:
-    def __init__(self):
-        pass
-
+class BasePizza(ABC):
+    @abstractmethod
     def price(self):
         pass
 
