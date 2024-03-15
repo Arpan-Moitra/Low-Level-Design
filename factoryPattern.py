@@ -33,11 +33,11 @@ class ShapeFactory:
     @staticmethod
     def get_shape(shape):
         shape_factory_map = {
-            'square': Square(),
-            'circle': Circle(),
-            'triangle': Triangle()
+            'square': Square,
+            'circle': Circle,
+            'triangle': Triangle
         }
-        return shape_factory_map[shape.lower()]
+        return shape_factory_map[shape.lower()]()
 
 
 def main():
